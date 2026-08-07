@@ -22,3 +22,9 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Documentação interna do projeto
+behaviors.txt
+comportaments.txt
+design.txt
+foundations.txt

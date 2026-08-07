@@ -1,48 +1,99 @@
 :root {
-  --text: #6b6375;
-  --text-h: #08060d;
-  --bg: #fff;
-  --border: #e5e4e7;
-  --code-bg: #f4f3ec;
-  --accent: #aa3bff;
-  --accent-bg: rgba(170, 59, 255, 0.1);
-  --accent-border: rgba(170, 59, 255, 0.5);
-  --social-bg: rgba(244, 243, 236, 0.5);
-  --shadow:
-    rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
+  /* --------------------------- Color System --------------------------- */
+  --background: #F8FAFC;
+  --surface: #FFFFFF;
+  --border: #E5E7EB;
+  --primary: #256EDC;
+  --text-primary: #0F172A;
+  --text-secondary: #475569;
+  --text-muted: #64748B;
 
-  --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
-  --heading: system-ui, 'Segoe UI', Roboto, sans-serif;
-  --mono: ui-monospace, Consolas, monospace;
+  /* Compatibility mappings with template */
+  --bg: var(--background);
+  --border-color: var(--border);
+  --text: var(--text-secondary);
+  --text-h: var(--text-primary);
+  --code-bg: #F1F5F9;
 
-  font: 18px/145% var(--sans);
+  /* --------------------------- Fonts --------------------------- */
+  --font-primary: "Inter", system-ui, -apple-system, sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+
+  /* Compatibility mappings with template */
+  --sans: var(--font-primary);
+  --heading: var(--font-primary);
+  --mono: var(--font-mono);
+
+  /* --------------------------- Typography Scale --------------------------- */
+  --font-size-display: 56px;
+  --font-size-hero-subtitle: 28px;
+  --font-size-h2: 40px;
+  --font-size-h3: 24px;
+  --font-size-body-large: 18px;
+  --font-size-body: 16px;
+  --font-size-btn-nav: 16px;
+  --font-size-small: 14px;
+  --font-size-terminal: 16px;
+
+  /* Font Weights */
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  /* --------------------------- Spacing Scale --------------------------- */
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+  --space-2xl: 48px;
+  --space-3xl: 64px;
+  --space-4xl: 80px;
+  --space-5xl: 96px;
+  --space-6xl: 128px;
+
+  /* --------------------------- Shadows --------------------------- */
+  --shadow-xs: 0 1px 2px rgba(15, 23, 42, 0.04);
+  --shadow-sm: 0 2px 8px rgba(15, 23, 42, 0.05);
+  --shadow-md: 0 4px 16px rgba(15, 23, 42, 0.06);
+  --shadow-lg: 0 12px 32px rgba(15, 23, 42, 0.08);
+
+  /* Compatibility mappings with template */
+  --shadow: var(--shadow-md);
+
+  /* Base styling settings */
+  font: var(--font-size-body-large)/145% var(--font-primary);
   letter-spacing: 0.18px;
   color-scheme: light dark;
-  color: var(--text);
-  background: var(--bg);
+  color: var(--text-secondary);
+  background: var(--background);
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
   @media (max-width: 1024px) {
-    font-size: 16px;
+    font-size: var(--font-size-body);
   }
 }
 
+/* --------------------------- Dark Mode Overrides --------------------------- */
 @media (prefers-color-scheme: dark) {
-  :root {
-    --text: #9ca3af;
-    --text-h: #f3f4f6;
-    --bg: #16171d;
-    --border: #2e303a;
-    --code-bg: #1f2028;
-    --accent: #c084fc;
-    --accent-bg: rgba(192, 132, 252, 0.15);
-    --accent-border: rgba(192, 132, 252, 0.5);
-    --social-bg: rgba(47, 48, 58, 0.5);
-    --shadow:
-      rgba(0, 0, 0, 0.4) 0 10px 15px -3px, rgba(0, 0, 0, 0.25) 0 4px 6px -2px;
+  :root:not([data-theme='light']) {
+    --background: #0B0F19;
+    --surface: #111827;
+    --border: #1F2937;
+    --primary: #3B82F6;
+    --text-primary: #F9FAFB;
+    --text-secondary: #D1D5DB;
+    --text-muted: #9CA3AF;
+    --code-bg: #1F2937;
+
+    --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.2);
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.25);
+    --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.3);
+    --shadow-lg: 0 12px 32px rgba(0, 0, 0, 0.4);
   }
 
   #social .button-icon {
@@ -50,6 +101,23 @@
   }
 }
 
+:root[data-theme='dark'] {
+  --background: #0B0F19;
+  --surface: #111827;
+  --border: #1F2937;
+  --primary: #3B82F6;
+  --text-primary: #F9FAFB;
+  --text-secondary: #D1D5DB;
+  --text-muted: #9CA3AF;
+  --code-bg: #1F2937;
+
+  --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.2);
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.25);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.3);
+  --shadow-lg: 0 12px 32px rgba(0, 0, 0, 0.4);
+}
+
+/* --------------------------- Global Reset & Layout --------------------------- */
 #root {
   width: 1126px;
   max-width: 100%;
@@ -60,52 +128,70 @@
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
+  padding-top: 80px; /* Offset for fixed navbar */
 }
 
 body {
   margin: 0;
+  background: var(--background);
+  color: var(--text-secondary);
+  font-family: var(--font-primary);
 }
 
+/* --------------------------- Typography Styles --------------------------- */
 h1,
-h2 {
-  font-family: var(--heading);
-  font-weight: 500;
-  color: var(--text-h);
+h2,
+h3 {
+  font-family: var(--font-primary);
+  color: var(--text-primary);
 }
 
 h1 {
-  font-size: 56px;
+  font-size: var(--font-size-display);
+  font-weight: var(--font-weight-bold);
   letter-spacing: -1.68px;
-  margin: 32px 0;
+  margin: var(--space-xl) 0;
   @media (max-width: 1024px) {
     font-size: 36px;
-    margin: 20px 0;
+    margin: var(--space-lg) 0;
   }
-}
-h2 {
-  font-size: 24px;
-  line-height: 118%;
-  letter-spacing: -0.24px;
-  margin: 0 0 8px;
-  @media (max-width: 1024px) {
-    font-size: 20px;
-  }
-}
-p {
-  margin: 0;
 }
 
+h2 {
+  font-size: var(--font-size-h2);
+  font-weight: var(--font-weight-bold);
+  line-height: 118%;
+  letter-spacing: -0.24px;
+  margin: 0 0 var(--space-sm);
+  @media (max-width: 1024px) {
+    font-size: 28px;
+  }
+}
+
+h3 {
+  font-size: var(--font-size-h3);
+  font-weight: var(--font-weight-semibold);
+  margin: 0 0 var(--space-sm);
+}
+
+p {
+  margin: 0;
+  font-size: var(--font-size-body);
+  color: var(--text-secondary);
+}
+
+/* --------------------------- Code & Base Components --------------------------- */
 code,
 .counter {
-  font-family: var(--mono);
+  font-family: var(--font-mono);
   display: inline-flex;
   border-radius: 4px;
-  color: var(--text-h);
+  color: var(--text-primary);
 }
 
 code {
   font-size: 15px;
   line-height: 135%;
-  padding: 4px 8px;
+  padding: 4px var(--space-sm);
   background: var(--code-bg);
 }

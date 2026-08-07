@@ -1,0 +1,243 @@
+.terminal-window {
+  width: 100%;
+  max-width: 800px;
+  background-color: #0D1117;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  box-shadow: var(--shadow-md);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: border-color 200ms ease;
+  text-align: left; /* Ensures terminal contents are always left-aligned */
+  margin: 0 auto;
+}
+
+/* --------------------------- Header --------------------------- */
+.terminal-header {
+  height: 40px;
+  background-color: #161B22;
+  border-bottom: 1px solid #30363D;
+  display: flex;
+  align-items: center;
+  padding: 0 var(--space-md);
+  position: relative;
+}
+
+.window-controls {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.control-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.control-dot.close {
+  background-color: #FF5F57;
+}
+
+.control-dot.minimize {
+  background-color: #FEBC2E;
+}
+
+.control-dot.maximize {
+  background-color: #28C840;
+}
+
+.terminal-title {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: var(--font-mono);
+  font-size: 14px;
+  color: #8B949E;
+  font-weight: 400;
+  pointer-events: none;
+}
+
+/* --------------------------- Body --------------------------- */
+.terminal-body {
+  padding: var(--space-lg);
+  font-family: var(--font-mono);
+  font-size: var(--font-size-terminal);
+  font-weight: var(--font-weight-medium);
+  color: #E6EDF3;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  min-height: 320px;
+  max-height: 480px;
+  overflow-y: auto;
+  /* Custom scrollbar for terminal look */
+}
+
+.terminal-body::-webkit-scrollbar {
+  width: 8px;
+}
+
+.terminal-body::-webkit-scrollbar-track {
+  background: #0D1117;
+}
+
+.terminal-body::-webkit-scrollbar-thumb {
+  background: #21262D;
+  border-radius: 4px;
+}
+
+.terminal-body::-webkit-scrollbar-thumb:hover {
+  background: #30363D;
+}
+
+/* Rows and Prompts */
+.terminal-row {
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.terminal-prompt {
+  color: var(--primary);
+  user-select: none;
+  flex-shrink: 0;
+}
+
+.terminal-content {
+  flex-grow: 1;
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
+  word-break: keep-all; /* Keeps whole words together on line breaks */
+}
+
+/* --------------------------- Cursor --------------------------- */
+.terminal-cursor {
+  display: inline-block;
+  width: 8px;
+  height: 15px;
+  background-color: var(--primary);
+  margin-left: 4px;
+  vertical-align: middle;
+}
+
+.terminal-cursor.blinking {
+  animation: cursor-blink 1s step-end infinite;
+}
+
+.terminal-cursor.typing {
+  opacity: 1;
+}
+
+@keyframes cursor-blink {
+  from, to { background-color: transparent }
+  50% { background-color: var(--primary) }
+}
+
+/* --------------------------- Output Content --------------------------- */
+.terminal-output-content {
+  margin-top: 4px;
+  margin-bottom: var(--space-md);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+  color: #E6EDF3;
+}
+
+.highlight-name {
+  color: #58A6FF;
+  font-weight: var(--font-weight-bold);
+  font-size: 18px;
+}
+
+.dim-text {
+  color: #8B949E;
+  font-size: 14px;
+}
+
+.loading-text {
+  color: #8B949E;
+  margin-bottom: var(--space-xs);
+}
+
+/* Skills Progress Row */
+.skills-progress-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+  margin-top: var(--space-xs);
+}
+
+.skill-progress-row {
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+  flex-wrap: wrap; /* Allows wrapping on small mobile screens */
+}
+
+.skill-name {
+  color: #FF7B72;
+  width: 110px;
+  flex-shrink: 0;
+}
+
+.skill-bar {
+  color: #79C0FF;
+  letter-spacing: 0px;
+  margin-right: var(--space-md);
+}
+
+.skill-percentage {
+  color: #58A6FF;
+  font-weight: var(--font-weight-bold);
+}
+
+/* --------------------------- Responsiveness --------------------------- */
+@media (max-width: 768px) {
+  .terminal-body {
+    padding: var(--space-md);
+    font-size: 14px;
+    min-height: 280px;
+  }
+
+  .terminal-title {
+    font-size: 12px;
+  }
+
+  .highlight-name {
+    font-size: 16px;
+  }
+
+  .skill-progress-row {
+    font-size: 13px;
+  }
+  
+  .skill-name {
+    width: 90px;
+  }
+
+  .skill-bar {
+    margin-right: var(--space-sm);
+  }
+}
+
+@media (max-width: 480px) {
+  .skill-progress-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-xs);
+    margin-bottom: var(--space-sm);
+  }
+
+  .skill-name {
+    width: 100%;
+  }
+
+  .skill-bar {
+    margin-right: 0;
+    font-size: 11px; /* shrink ASCII bar slightly to fit narrow screen */
+  }
+}

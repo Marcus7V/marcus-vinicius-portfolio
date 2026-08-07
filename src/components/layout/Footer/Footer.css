@@ -1,0 +1,86 @@
+.footer {
+  width: 100%;
+  background-color: transparent;
+  border-top: 1px solid var(--border);
+  padding: var(--space-xl) 0;
+  font-family: var(--font-primary);
+  margin-top: auto; /* Pushes footer to bottom if content is short */
+  transition: border-color 200ms ease;
+}
+
+.footer-container {
+  max-width: 1126px;
+  margin: 0 auto;
+  padding: 0 var(--space-xl);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-md);
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+    gap: var(--space-md);
+  }
+}
+
+.footer-copyright {
+  font-size: var(--font-size-small);
+  color: var(--text-muted);
+  margin: 0;
+}
+
+.footer-socials {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+}
+
+.footer-social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  color: var(--text-secondary);
+  background-color: transparent;
+  text-decoration: none;
+  transition: all 200ms ease-in-out;
+}
+
+.footer-social-link:hover {
+  color: var(--primary);
+  background-color: var(--border);
+  transform: scale(1.1);
+}
+
+.footer-social-link:active {
+  transform: scale(0.95);
+}
+
+.footer-social-link .social-icon {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+}
+
+/* Specific styling for SVG symbols loaded via <use> inside social icon */
+.footer-social-link .social-icon path {
+  fill: currentColor; /* ensures colors adapt to text color change */
+}
+
+/* In dark mode, if the SVG has static color, let's adjust it using filter */
+:root[data-theme='dark'] .footer-social-link .social-icon:not(.inline-icon),
+:root:not([data-theme='light']) .footer-social-link .social-icon:not(.inline-icon) {
+  filter: invert(0.9) brightness(1.5);
+}
+
+/* Hover scales and coloring for dark mode */
+:root[data-theme='dark'] .footer-social-link:hover .social-icon:not(.inline-icon),
+:root:not([data-theme='light']) .footer-social-link:hover .social-icon:not(.inline-icon) {
+  filter: none; /* remove filter on hover when using the primary highlight */
+  color: var(--primary);
+}

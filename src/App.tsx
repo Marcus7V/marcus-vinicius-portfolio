@@ -1,7 +1,9 @@
 import { useState } from 'react'
+import { Navbar } from './components/layout/Navbar/Navbar'
+import { Footer } from './components/layout/Footer/Footer'
+import { Terminal } from './components/ui/Terminal/Terminal'
 import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
 import './App.css'
 
 function App() {
@@ -9,25 +11,45 @@ function App() {
 
   return (
     <>
-      <section id="center">
-        <div className="hero">
-          <img src={heroImg} className="base" width="170" height="179" alt="" />
-          <img src={reactLogo} className="framework" alt="React logo" />
-          <img src={viteLogo} className="vite" alt="Vite logo" />
-        </div>
-        <div>
-          <h1>Get started</h1>
-          <p>
-            Edit <code>src/App.tsx</code> and save to test <code>HMR</code>
+      <Navbar />
+
+      {/* Hero Section showcasing our new interactive Terminal */}
+      <section id="hero" className="scroll-section" style={{ padding: '64px var(--space-xl)', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 'var(--space-xl)' }}>
+        <div style={{ textAlign: 'center', maxWidth: '800px' }}>
+          <h1 style={{ marginBottom: 'var(--space-xs)' }}>Marcus Vinicius</h1>
+          <p style={{ fontSize: 'var(--font-size-body-large)', color: 'var(--text-secondary)', marginBottom: 'var(--space-md)' }}>
+            Desenvolvedor Full Stack Júnior | Estudante de ADS
           </p>
         </div>
-        <button
-          type="button"
-          className="counter"
-          onClick={() => setCount((count) => count + 1)}
-        >
-          Count is {count}
-        </button>
+        <Terminal />
+      </section>
+
+      <div className="ticks"></div>
+
+      <section id="about" className="scroll-section" style={{ padding: '80px 24px', textAlign: 'center' }}>
+        <h2>Sobre Mim (Mock)</h2>
+        <p>Esta seção será preenchida na etapa de desenvolvimento do conteúdo.</p>
+      </section>
+
+      <div className="ticks"></div>
+
+      <section id="projects" className="scroll-section" style={{ padding: '80px 24px', textAlign: 'center' }}>
+        <h2>Projetos (Mock)</h2>
+        <p>Esta seção será preenchida na etapa de desenvolvimento do conteúdo.</p>
+      </section>
+
+      <div className="ticks"></div>
+
+      <section id="skills" className="scroll-section" style={{ padding: '80px 24px', textAlign: 'center' }}>
+        <h2>Habilidades (Mock)</h2>
+        <p>Esta seção será preenchida na etapa de desenvolvimento do conteúdo.</p>
+      </section>
+
+      <div className="ticks"></div>
+
+      <section id="contact" className="scroll-section" style={{ padding: '80px 24px', textAlign: 'center' }}>
+        <h2>Contato (Mock)</h2>
+        <p>Esta seção será preenchida na etapa de desenvolvimento do conteúdo.</p>
       </section>
 
       <div className="ticks"></div>
@@ -41,13 +63,13 @@ function App() {
           <p>Your questions, answered</p>
           <ul>
             <li>
-              <a href="https://vite.dev/" target="_blank">
+              <a href="https://vite.dev/" target="_blank" rel="noreferrer">
                 <img className="logo" src={viteLogo} alt="" />
                 Explore Vite
               </a>
             </li>
             <li>
-              <a href="https://react.dev/" target="_blank">
+              <a href="https://react.dev/" target="_blank" rel="noreferrer">
                 <img className="button-icon" src={reactLogo} alt="" />
                 Learn more
               </a>
@@ -62,7 +84,7 @@ function App() {
           <p>Join the Vite community</p>
           <ul>
             <li>
-              <a href="https://github.com/vitejs/vite" target="_blank">
+              <a href="https://github.com/vitejs/vite" target="_blank" rel="noreferrer">
                 <svg
                   className="button-icon"
                   role="presentation"
@@ -74,7 +96,7 @@ function App() {
               </a>
             </li>
             <li>
-              <a href="https://chat.vite.dev/" target="_blank">
+              <a href="https://chat.vite.dev/" target="_blank" rel="noreferrer">
                 <svg
                   className="button-icon"
                   role="presentation"
@@ -86,7 +108,7 @@ function App() {
               </a>
             </li>
             <li>
-              <a href="https://x.com/vite_js" target="_blank">
+              <a href="https://x.com/vite_js" target="_blank" rel="noreferrer">
                 <svg
                   className="button-icon"
                   role="presentation"
@@ -98,7 +120,7 @@ function App() {
               </a>
             </li>
             <li>
-              <a href="https://bsky.app/profile/vite.dev" target="_blank">
+              <a href="https://bsky.app/profile/vite.dev" target="_blank" rel="noreferrer">
                 <svg
                   className="button-icon"
                   role="presentation"
@@ -114,7 +136,18 @@ function App() {
       </section>
 
       <div className="ticks"></div>
-      <section id="spacer"></section>
+      <section id="spacer">
+        <button
+          type="button"
+          className="counter"
+          onClick={() => setCount((count) => count + 1)}
+          style={{ display: 'none' }} /* Hidden but preserved count logic for compatibility */
+        >
+          Count is {count}
+        </button>
+      </section>
+
+      <Footer />
     </>
   )
 }
