@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { Navbar } from './components/layout/Navbar/Navbar'
 import { Footer } from './components/layout/Footer/Footer'
-import { Terminal } from './components/ui/Terminal/Terminal'
+import { Hero } from './components/sections/Hero/Hero'
 import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
 import './App.css'
@@ -13,16 +13,7 @@ function App() {
     <>
       <Navbar />
 
-      {/* Hero Section showcasing our new interactive Terminal */}
-      <section id="hero" className="scroll-section" style={{ padding: '64px var(--space-xl)', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 'var(--space-xl)' }}>
-        <div style={{ textAlign: 'center', maxWidth: '800px' }}>
-          <h1 style={{ marginBottom: 'var(--space-xs)' }}>Marcus Vinicius</h1>
-          <p style={{ fontSize: 'var(--font-size-body-large)', color: 'var(--text-secondary)', marginBottom: 'var(--space-md)' }}>
-            Desenvolvedor Full Stack Júnior | Estudante de ADS
-          </p>
-        </div>
-        <Terminal />
-      </section>
+      <Hero />
 
       <div className="ticks"></div>
 
