@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { useTheme } from '../../../hooks/useTheme';
 import './Navbar.css';
 
@@ -20,6 +20,30 @@ export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('hero');
+  const skipInitialObserverRef = useRef(true);
+
+  useEffect(() => {
+    if ('scrollRestoration' in window.history) {
+      window.history.scrollRestoration = 'manual';
+    }
+
+    const currentHash = window.location.hash;
+    if (currentHash && currentHash !== '#hero') {
+      window.history.replaceState(null, '', `${window.location.pathname}${window.location.search}`);
+    }
+
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: 'auto',
+    });
+
+    const timer = window.setTimeout(() => {
+      skipInitialObserverRef.current = false;
+    }, 0);
+
+    return () => window.clearTimeout(timer);
+  }, []);
 
   // Shadow on scroll and constant height behavior
   useEffect(() => {
@@ -46,6 +70,8 @@ export function Navbar() {
     };
 
     const observer = new IntersectionObserver((entries) => {
+      if (skipInitialObserverRef.current) return;
+
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           setActiveSection(entry.target.id);

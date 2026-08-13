@@ -12,7 +12,7 @@ export function Terminal() {
   const [isTyping, setIsTyping] = useState(false);
   const [isComplete, setIsComplete] = useState(false);
   
-  const terminalEndRef = useRef<HTMLDivElement>(null);
+  const terminalBodyRef = useRef<HTMLDivElement>(null);
   const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   const commands = useMemo(
@@ -45,7 +45,9 @@ export function Terminal() {
 
   // Auto-scroll to bottom of terminal
   useEffect(() => {
-    terminalEndRef.current?.scrollIntoView({ behavior: 'smooth' });
+    if (terminalBodyRef.current) {
+      terminalBodyRef.current.scrollTop = terminalBodyRef.current.scrollHeight;
+    }
   }, [lines, typedText]);
 
   useEffect(() => {
@@ -110,7 +112,7 @@ export function Terminal() {
       </div>
 
       {/* Body */}
-      <div className="terminal-body">
+      <div ref={terminalBodyRef} className="terminal-body">
         {/* Render history of lines */}
         {lines.map((line, idx) => (
           <div key={idx} className={`terminal-row ${line.type}`}>
@@ -141,8 +143,6 @@ export function Terminal() {
             </div>
           </div>
         )}
-
-        <div ref={terminalEndRef} />
       </div>
     </div>
   );
