@@ -133,11 +133,29 @@
   z-index: 1;
 }
 
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+}
+
 body {
   margin: 0;
   background: var(--background);
   color: var(--text-secondary);
   font-family: var(--font-primary);
+}
+
+a,
+button,
+select {
+  transition: color 200ms ease, background-color 200ms ease, border-color 200ms ease, transform 200ms ease;
+}
+
+a:focus-visible,
+button:focus-visible,
+select:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
 }
 
 /* --------------------------- Typography Styles --------------------------- */
