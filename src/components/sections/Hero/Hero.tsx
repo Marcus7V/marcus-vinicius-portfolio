@@ -21,6 +21,9 @@ export function Hero() {
             <a className="hero-cta secondary" href="#contact">
               {t.hero.contact}
             </a>
+            <a className="hero-cta secondary" href="/files/CV_Marcus_Vinicius.pdf" download>
+              {t.hero.downloadCv}
+            </a>
           </div>
 
           <div className="hero-highlights" aria-label={t.hero.techLabel}>

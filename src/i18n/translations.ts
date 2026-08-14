@@ -17,6 +17,7 @@ export type TranslationContent = {
     description: string;
     projects: string;
     contact: string;
+    downloadCv: string;
     techLabel: string;
   };
   about: {
@@ -37,14 +38,28 @@ export type TranslationContent = {
     github: string;
     demo: string;
   };
+  education: {
+    label: string;
+    title: string;
+    period: string;
+    degree: string;
+    school: string;
+  };
+  certifications: {
+    label: string;
+    title: string;
+    empty: string;
+  };
   contact: {
     label: string;
     title: string;
     context: string;
+    phoneLabel: string;
     download: string;
   };
   footer: {
     rights: string;
+    downloadCv: string;
   };
 };
 
@@ -66,6 +81,7 @@ export const translations: Record<Language, TranslationContent> = {
       description: 'Focado em construir soluções web eficientes, limpas e de alto desempenho.',
       projects: 'Projetos',
       contact: 'Contato',
+      downloadCv: 'Baixar currículo',
       techLabel: 'Tecnologias principais',
     },
     about: {
@@ -91,14 +107,28 @@ export const translations: Record<Language, TranslationContent> = {
       github: 'GitHub',
       demo: 'Demo',
     },
+    education: {
+      label: 'EDUCATION.MD',
+      title: 'Formação',
+      period: '2024 — 2026',
+      degree: 'Técnico em Desenvolvimento de Sistemas',
+      school: 'SENAI São Paulo',
+    },
+    certifications: {
+      label: 'CERTIFICATIONS.MD',
+      title: 'Certificações',
+      empty: 'As certificações serão adicionadas em breve.',
+    },
     contact: {
       label: 'CONTACT.MD',
       title: 'Contato',
       context: 'Disponível para projetos, colaborações e oportunidades.',
+      phoneLabel: 'Telefone',
       download: 'Baixar currículo',
     },
     footer: {
       rights: 'Todos os direitos reservados.',
+      downloadCv: 'Baixar currículo',
     },
   },
   en: {
@@ -109,7 +139,7 @@ export const translations: Record<Language, TranslationContent> = {
       contact: 'Contact',
     },
     skills: {
-      label: '03',
+      label: 'Skills.md',
       title: 'Skills',
     },
     hero: {
@@ -118,6 +148,7 @@ export const translations: Record<Language, TranslationContent> = {
       description: 'Focused on building efficient, clean, and high-performance web solutions.',
       projects: 'Projects',
       contact: 'Contact',
+      downloadCv: 'Download CV',
       techLabel: 'Main technologies',
     },
     about: {
@@ -143,14 +174,28 @@ export const translations: Record<Language, TranslationContent> = {
       github: 'GitHub',
       demo: 'Demo',
     },
+    education: {
+      label: 'EDUCATION.MD',
+      title: 'Education',
+      period: '2024 — 2026',
+      degree: 'Systems Development Technician',
+      school: 'SENAI São Paulo',
+    },
+    certifications: {
+      label: 'CERTIFICATIONS.MD',
+      title: 'Certifications',
+      empty: 'Certifications will be added soon.',
+    },
     contact: {
       label: 'CONTACT.MD',
       title: 'Contact',
       context: 'Available for projects, collaborations, and opportunities.',
+      phoneLabel: 'Phone',
       download: 'Download CV',
     },
     footer: {
       rights: 'All rights reserved.',
+      downloadCv: 'Download CV',
     },
   },
 };

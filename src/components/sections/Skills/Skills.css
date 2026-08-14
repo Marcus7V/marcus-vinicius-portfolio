@@ -1,13 +1,13 @@
 .skills-section {
   width: 100%;
-  padding: 80px 24px;
+  padding: 56px 18px;
   box-sizing: border-box;
 }
 
 .skills-header {
-  width: min(1126px, 100%);
+  width: min(1180px, 100%);
   margin: 0 auto 18px;
-  text-align: center;
+  text-align: left;
 }
 
 .skills-label {
@@ -23,13 +23,13 @@
 
 .skills-header h2 {
   margin: 0;
-  font-size: clamp(2.3rem, 4vw, 4rem);
+  font-size: clamp(2rem, 3.1vw, 3.2rem);
   line-height: 1.08;
   letter-spacing: -0.05em;
 }
 
 .skills-grid {
-  width: min(1126px, 100%);
+  width: min(1180px, 100%);
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -39,8 +39,8 @@
   display: grid;
   grid-template-columns: minmax(180px, 0.9fr) minmax(0, 2.1fr);
   align-items: center;
-  gap: 28px;
-  padding: 18px 0;
+  gap: 20px;
+  padding: 16px 0;
   border-top: 1px solid var(--border);
 }
 
@@ -67,7 +67,7 @@
 
 .skill-meta h3 {
   margin: 0;
-  font-size: clamp(1.5rem, 2vw, 2rem);
+  font-size: clamp(1.35rem, 1.8vw, 1.75rem);
   line-height: 1.15;
   letter-spacing: -0.04em;
 }
@@ -84,13 +84,13 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-height: 28px;
-  padding: 6px 12px;
+  min-height: 26px;
+  padding: 5px 10px;
   border: 1px solid var(--border);
   border-radius: 999px;
   background: rgba(15, 23, 42, 0.015);
   color: var(--text-secondary);
-  font-size: 0.73rem;
+  font-size: 0.7rem;
   font-weight: 500;
   line-height: 1.1;
   letter-spacing: 0;

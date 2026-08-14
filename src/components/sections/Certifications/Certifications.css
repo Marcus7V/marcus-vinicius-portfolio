@@ -1,0 +1,58 @@
+.certifications-section {
+  width: 100%;
+  padding: 56px 18px;
+  box-sizing: border-box;
+}
+
+.certifications-shell {
+  width: min(1180px, 100%);
+  margin: 0 auto;
+}
+
+.certifications-header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.certifications-label {
+  display: inline-block;
+  color: var(--primary);
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.certifications-header h2 {
+  margin: 0;
+  font-size: clamp(1.7rem, 2vw, 2.4rem);
+  line-height: 1.12;
+  letter-spacing: -0.04em;
+  color: var(--text-primary);
+}
+
+.certifications-empty {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 120px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: rgba(148, 163, 184, 0.02);
+  padding: 20px 22px;
+}
+
+.certifications-empty p {
+  margin: 0;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .certifications-section {
+    padding: 64px 20px;
+  }
+}

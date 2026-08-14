@@ -11,6 +11,11 @@ export function Contact() {
       href: 'mailto:marcusvini751663@gmail.com',
     },
     {
+      label: t.contact.phoneLabel,
+      value: '+55 (11) 93438-0311',
+      href: 'tel:+5511934380311',
+    },
+    {
       label: 'GitHub',
       value: 'https://github.com/Marcus7V',
       href: 'https://github.com/Marcus7V',
@@ -34,7 +39,6 @@ export function Contact() {
         <div className="contact-header">
           <span className="contact-label">{t.contact.label}</span>
           <div className="contact-heading">
-            <span className="contact-index">04</span>
             <h2>{t.contact.title}</h2>
           </div>
           <p className="contact-context">{t.contact.context}</p>

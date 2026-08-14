@@ -1,7 +1,7 @@
 .hero-section {
   width: 100%;
   max-width: 100%;
-  padding: var(--space-4xl) var(--space-xl);
+  padding: 40px 18px 32px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -9,7 +9,7 @@
 }
 
 .hero-content {
-  width: min(1126px, 100%);
+  width: min(1180px, 100%);
   max-width: 100%;
   display: grid;
   grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
@@ -45,24 +45,24 @@
   margin: 0;
   width: 100%;
   min-width: 0;
-  font-size: clamp(2.25rem, 4.5vw, 3.5rem);
-  line-height: 1.05;
+  font-size: clamp(2.1rem, 3.8vw, 3.1rem);
+  line-height: 1.08;
 }
 
 .hero-subtitle {
   margin: 0;
   color: var(--text-secondary);
-  font-size: var(--font-size-hero-subtitle);
+  font-size: 24px;
   font-weight: var(--font-weight-semibold);
   width: 100%;
   min-width: 0;
 }
 
 .hero-description {
-  max-width: 560px;
+  max-width: 540px;
   min-width: 0;
   width: 100%;
-  font-size: var(--font-size-body-large);
+  font-size: 16px;
   line-height: 1.6;
   color: var(--text-secondary);
 }
@@ -70,8 +70,8 @@
 .hero-actions {
   display: flex;
   flex-wrap: wrap;
-  gap: var(--space-md);
-  margin-top: var(--space-xs);
+  gap: 12px;
+  margin-top: 0;
   width: 100%;
   min-width: 0;
 }
@@ -80,9 +80,9 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 12px 24px;
+  padding: 10px 20px;
   border-radius: 8px;
-  font-size: var(--font-size-btn-nav);
+  font-size: 14px;
   font-weight: var(--font-weight-medium);
   text-decoration: none;
   transition: transform 200ms ease, background-color 200ms ease, color 200ms ease, border-color 200ms ease;
@@ -121,8 +121,8 @@
 .hero-highlights {
   display: flex;
   flex-wrap: wrap;
-  gap: var(--space-sm);
-  margin-top: var(--space-sm);
+  gap: 8px;
+  margin-top: 4px;
   width: 100%;
   min-width: 0;
 }
@@ -130,11 +130,11 @@
 .hero-highlights span {
   border: 1px solid var(--border);
   border-radius: 999px;
-  padding: 6px 12px;
+  padding: 5px 10px;
   color: var(--text-secondary);
   background-color: var(--surface);
   box-shadow: var(--shadow-xs);
-  font-size: var(--font-size-small);
+  font-size: 12px;
   max-width: 100%;
 }
 

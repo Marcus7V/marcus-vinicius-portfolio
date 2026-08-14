@@ -1,11 +1,11 @@
 .about-section {
   width: 100%;
-  padding: 80px 24px;
+  padding: 56px 18px;
   box-sizing: border-box;
 }
 
 .about-grid {
-  width: min(1126px, 100%);
+  width: min(1180px, 100%);
   margin: 0 auto;
   display: grid;
   grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr);
@@ -29,19 +29,20 @@
 }
 
 .about-copy h2 {
-  margin-bottom: 24px;
+  margin-bottom: 20px;
+  font-size: clamp(2rem, 2.8vw, 2.8rem);
 }
 
 .about-text {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 16px;
   max-width: 680px;
 }
 
 .about-text p {
-  font-size: 1.0625rem;
-  line-height: 1.8;
+  font-size: 1rem;
+  line-height: 1.7;
   color: var(--text-secondary);
 }
 
