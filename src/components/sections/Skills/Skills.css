@@ -1,0 +1,125 @@
+.skills-section {
+  width: 100%;
+  padding: 80px 24px;
+  box-sizing: border-box;
+}
+
+.skills-header {
+  width: min(1126px, 100%);
+  margin: 0 auto 18px;
+  text-align: center;
+}
+
+.skills-label {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--primary);
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.skills-header h2 {
+  margin: 0;
+  font-size: clamp(2.3rem, 4vw, 4rem);
+  line-height: 1.08;
+  letter-spacing: -0.05em;
+}
+
+.skills-grid {
+  width: min(1126px, 100%);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.skill-row {
+  display: grid;
+  grid-template-columns: minmax(180px, 0.9fr) minmax(0, 2.1fr);
+  align-items: center;
+  gap: 28px;
+  padding: 18px 0;
+  border-top: 1px solid var(--border);
+}
+
+.skill-row:last-child {
+  border-bottom: 1px solid var(--border);
+}
+
+.skill-meta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  min-width: 0;
+}
+
+.skill-kicker {
+  color: var(--primary);
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: lowercase;
+}
+
+.skill-meta h3 {
+  margin: 0;
+  font-size: clamp(1.5rem, 2vw, 2rem);
+  line-height: 1.15;
+  letter-spacing: -0.04em;
+}
+
+.skill-tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 10px;
+  min-width: 0;
+}
+
+.skill-tag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 28px;
+  padding: 6px 12px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: rgba(15, 23, 42, 0.015);
+  color: var(--text-secondary);
+  font-size: 0.73rem;
+  font-weight: 500;
+  line-height: 1.1;
+  letter-spacing: 0;
+  transition: border-color 200ms ease, color 200ms ease, background-color 200ms ease;
+}
+
+.skill-tag:hover {
+  border-color: rgba(37, 110, 220, 0.2);
+  color: var(--primary);
+}
+
+.skill-tag.is-highlighted {
+  background: rgba(37, 110, 220, 0.06);
+  border-color: rgba(37, 110, 220, 0.16);
+  color: var(--primary);
+}
+
+@media (max-width: 768px) {
+  .skills-section {
+    padding: 64px 20px;
+  }
+
+  .skill-row {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    padding: 16px 0;
+  }
+
+  .skill-meta {
+    align-items: flex-start;
+  }
+}

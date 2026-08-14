@@ -1,5 +1,6 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useMemo, useRef } from 'react';
 import { useTheme } from '../../../hooks/useTheme';
+import { useLanguage } from '../../../i18n/useLanguage';
 import './Navbar.css';
 
 interface NavItem {
@@ -7,20 +8,20 @@ interface NavItem {
   href: string;
 }
 
-const navItems: NavItem[] = [
-  { label: 'Home', href: '#hero' },
-  { label: 'Sobre', href: '#about' },
-  { label: 'Projetos', href: '#projects' },
-  { label: 'Habilidades', href: '#skills' },
-  { label: 'Contato', href: '#contact' },
-];
-
 export function Navbar() {
   const { theme, toggleTheme } = useTheme();
+  const { language, setLanguage, t } = useLanguage();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('hero');
   const skipInitialObserverRef = useRef(true);
+
+  const navItems = useMemo<NavItem[]>(() => [
+    { label: t.nav.about, href: '#about' },
+    { label: t.nav.projects, href: '#projects' },
+    { label: t.nav.skills, href: '#skills' },
+    { label: t.nav.contact, href: '#contact' },
+  ], [t]);
 
   useEffect(() => {
     if ('scrollRestoration' in window.history) {
@@ -88,7 +89,7 @@ export function Navbar() {
         if (section) observer.unobserve(section);
       });
     };
-  }, []);
+  }, [navItems]);
 
   const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     e.preventDefault();
@@ -133,22 +134,30 @@ export function Navbar() {
           ))}
         </div>
 
-        {/* Action Group (Theme Switcher + Mobile Menu Button) */}
+        {/* Action Group (desktop only) */}
         <div className="navbar-actions">
-          {/* Theme Toggle Button */}
+          <select
+            value={language}
+            onChange={(event) => setLanguage(event.target.value as 'pt-BR' | 'en')}
+            className="language-select"
+            aria-label={language === 'pt-BR' ? 'Selecionar idioma' : 'Select language'}
+            title={language === 'pt-BR' ? 'Selecionar idioma' : 'Select language'}
+          >
+            <option value="pt-BR">PT-BR</option>
+            <option value="en">EN</option>
+          </select>
+
           <button
             onClick={toggleTheme}
             className="theme-toggle"
-            aria-label={`Mudar para tema ${theme === 'light' ? 'escuro' : 'claro'}`}
+            aria-label={theme === 'light' ? 'Mudar para tema escuro' : 'Mudar para tema claro'}
             type="button"
           >
             {theme === 'light' ? (
-              // Moon Icon
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="icon-moon">
                 <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
               </svg>
             ) : (
-              // Sun Icon
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="icon-sun">
                 <circle cx="12" cy="12" r="5"></circle>
                 <line x1="12" y1="1" x2="12" y2="3"></line>
@@ -163,7 +172,19 @@ export function Navbar() {
             )}
           </button>
 
-          {/* Hamburger Mobile Button */}
+          <a
+            href="/files/CV_Marcus_Vinicius.pdf"
+            className="download-link"
+            aria-label="Baixar currículo"
+            download
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+              <path d="M12 3v12"></path>
+              <path d="M7 20l5 5 5-5"></path>
+              <path d="M3 21h18"></path>
+            </svg>
+          </a>
+
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             className={`mobile-menu-toggle ${isMobileMenuOpen ? 'open' : ''}`}
@@ -177,7 +198,6 @@ export function Navbar() {
         </div>
       </div>
 
-      {/* Mobile Drawer Menu */}
       <div className={`mobile-drawer ${isMobileMenuOpen ? 'open' : ''}`}>
         <div className="mobile-drawer-links">
           {navItems.map((item) => (
@@ -190,6 +210,41 @@ export function Navbar() {
               {item.label}
             </a>
           ))}
+
+          <div className="mobile-drawer-actions">
+            <label className="mobile-action-row">
+              <span className="mobile-action-label">Idioma</span>
+              <select
+                value={language}
+                onChange={(event) => setLanguage(event.target.value as 'pt-BR' | 'en')}
+                className="mobile-language-select"
+                aria-label={language === 'pt-BR' ? 'Selecionar idioma' : 'Select language'}
+                title={language === 'pt-BR' ? 'Selecionar idioma' : 'Select language'}
+              >
+                <option value="pt-BR">PT-BR</option>
+                <option value="en">EN</option>
+              </select>
+            </label>
+
+            <button
+              onClick={toggleTheme}
+              className="mobile-theme-toggle"
+              aria-label={theme === 'light' ? 'Mudar para tema escuro' : 'Mudar para tema claro'}
+              type="button"
+            >
+              <span className="mobile-action-label">{theme === 'light' ? 'Tema escuro' : 'Tema claro'}</span>
+            </button>
+
+            <a
+              href="/files/CV_Marcus_Vinicius.pdf"
+              className="mobile-download-link"
+              aria-label="Baixar currículo"
+              download
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              <span className="mobile-action-label">Currículo</span>
+            </a>
+          </div>
         </div>
       </div>
     </nav>

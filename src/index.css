@@ -25,15 +25,15 @@
   --mono: var(--font-mono);
 
   /* --------------------------- Typography Scale --------------------------- */
-  --font-size-display: 56px;
-  --font-size-hero-subtitle: 28px;
-  --font-size-h2: 40px;
-  --font-size-h3: 24px;
-  --font-size-body-large: 18px;
-  --font-size-body: 16px;
-  --font-size-btn-nav: 16px;
-  --font-size-small: 14px;
-  --font-size-terminal: 16px;
+  --font-size-display: 52px;
+  --font-size-hero-subtitle: 26px;
+  --font-size-h2: 36px;
+  --font-size-h3: 22px;
+  --font-size-body-large: 17px;
+  --font-size-body: 15px;
+  --font-size-btn-nav: 15px;
+  --font-size-small: 13px;
+  --font-size-terminal: 15px;
 
   /* Font Weights */
   --font-weight-regular: 400;

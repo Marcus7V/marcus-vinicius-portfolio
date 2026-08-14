@@ -22,7 +22,7 @@ export function Terminal() {
       output: (
         <div className="terminal-output-content">
           <p className="highlight-name">Marcus Vinicius</p>
-          <p>Estudante de Análise e Desenvolvimento de Sistemas & Desenvolvedor Full Stack Júnior.</p>
+          <p>Técnico em Desenvolvimento de Sistemas — SENAI São Paulo & Desenvolvedor Full Stack Júnior.</p>
           <p className="dim-text">Focado em construir soluções web eficientes, limpas e de alto desempenho.</p>
         </div>
       ),

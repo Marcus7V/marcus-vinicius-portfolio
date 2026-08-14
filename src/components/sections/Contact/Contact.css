@@ -1,0 +1,122 @@
+.contact-section {
+  width: 100%;
+  padding: 80px 24px;
+  box-sizing: border-box;
+}
+
+.contact-shell {
+  width: min(1126px, 100%);
+  margin: 0 auto;
+}
+
+.contact-header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.contact-label {
+  display: inline-block;
+  color: var(--primary);
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.contact-heading {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+}
+
+.contact-index {
+  color: var(--primary);
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.contact-heading h2 {
+  margin: 0;
+  font-size: clamp(1.8rem, 2.2vw, 2.6rem);
+  line-height: 1.1;
+  letter-spacing: -0.04em;
+  color: var(--text-primary);
+}
+
+.contact-context {
+  max-width: 620px;
+  color: var(--text-secondary);
+  font-size: clamp(1rem, 1.4vw, 1.2rem);
+  line-height: 1.6;
+}
+
+.contact-divider {
+  width: 100%;
+  margin: 22px 0 26px;
+  border-top: 1px solid var(--border);
+}
+
+.contact-links {
+  display: grid;
+  gap: 12px;
+}
+
+.contact-link {
+  display: grid;
+  grid-template-columns: minmax(110px, 120px) minmax(0, 1fr);
+  align-items: center;
+  gap: 16px;
+  min-height: 54px;
+  padding: 0 0 10px;
+  border-bottom: 1px solid var(--border);
+  text-decoration: none;
+  transition: color 200ms ease, border-color 200ms ease;
+}
+
+.contact-link:hover {
+  border-color: rgba(37, 110, 220, 0.3);
+}
+
+.contact-link-label {
+  color: var(--text-primary);
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.contact-link-value {
+  color: var(--text-secondary);
+  font-size: 1.05rem;
+  line-height: 1.5;
+  word-break: break-word;
+}
+
+.contact-link:hover .contact-link-value {
+  color: var(--primary);
+}
+
+@media (max-width: 768px) {
+  .contact-section {
+    padding: 64px 20px;
+  }
+
+  .contact-heading {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .contact-link {
+    grid-template-columns: 1fr;
+    gap: 8px;
+    padding-bottom: 12px;
+  }
+}
