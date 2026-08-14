@@ -15,7 +15,14 @@ export function Certifications() {
         <div className="section-divider" />
 
         <div className="certifications-empty" aria-live="polite">
-          <p>{t.certifications.empty}</p>
+          <a
+            href="https://www.credly.com/users/marcus-vinicius.e37dde10"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="certifications-link"
+          >
+            {t.certifications.credly}
+          </a>
         </div>
       </div>
     </section>

@@ -139,12 +139,13 @@
 
 /* --------------------------- Output Content --------------------------- */
 .terminal-output-content {
-  margin-top: 4px;
-  margin-bottom: var(--space-md);
+  width: min(100%, 520px);
+  margin: 4px auto var(--space-md);
   display: flex;
   flex-direction: column;
   gap: var(--space-xs);
   color: #E6EDF3;
+  text-align: left;
 }
 
 .highlight-name {

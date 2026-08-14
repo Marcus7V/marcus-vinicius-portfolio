@@ -77,29 +77,6 @@ export function Projects() {
               <h3>{t.projects.upcomingTitle}</h3>
             </div>
           </div>
-
-          <div className="project-story-content">
-            <div className="project-preview project-preview-placeholder">PROJECT PREVIEW</div>
-
-            <div className="project-body">
-              <p>{t.projects.upcomingBody}</p>
-
-              <div className="project-tags" aria-label="Tecnologias do projeto">
-                <span>React</span>
-                <span>TypeScript</span>
-                <span>Node.js</span>
-              </div>
-
-              <div className="project-actions">
-                <a href="#" className="project-link secondary">
-                  {t.projects.github}
-                </a>
-                <a href="#" className="project-link primary">
-                  {t.projects.demo}
-                </a>
-              </div>
-            </div>
-          </div>
         </article>
       </div>
     </section>

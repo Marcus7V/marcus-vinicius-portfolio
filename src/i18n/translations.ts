@@ -34,7 +34,6 @@ export type TranslationContent = {
     body: string;
     comingSoon: string;
     upcomingTitle: string;
-    upcomingBody: string;
     github: string;
     demo: string;
   };
@@ -48,7 +47,7 @@ export type TranslationContent = {
   certifications: {
     label: string;
     title: string;
-    empty: string;
+    credly: string;
   };
   contact: {
     label: string;
@@ -77,7 +76,7 @@ export const translations: Record<Language, TranslationContent> = {
     },
     hero: {
       eyebrow: 'Desenvolvedor Full Stack Júnior',
-      subtitle: 'Técnico em Desenvolvimento de Sistemas — SENAI São Paulo',
+      subtitle: 'Técnico em Desenvolvimento de Sistemas',
       description: 'Focado em construir soluções web eficientes, limpas e de alto desempenho.',
       projects: 'Projetos',
       contact: 'Contato',
@@ -88,10 +87,9 @@ export const translations: Record<Language, TranslationContent> = {
       label: 'ABOUT.MD',
       title: 'Sobre Mim',
       paragraphs: [
-        'Sou Marcus Vinicius, Desenvolvedor Full Stack Júnior e técnico em Desenvolvimento de Sistemas pelo SENAI São Paulo. Essa formação me deu uma base sólida em programação, desenvolvimento web, bancos de dados e engenharia de software.',
-        'Gosto de transformar ideias em aplicações funcionais, buscando escrever código limpo, organizar bem meus projetos e criar interfaces que sejam bonitas e fáceis de usar.',
-        'Atualmente trabalho principalmente com React, TypeScript, JavaScript, Python, Node.js, SQL e Git/GitHub. Também venho explorando conceitos de Cloud, DevOps, observabilidade e segurança de aplicações para entender cada vez mais o ciclo completo de desenvolvimento.',
-        'Meus projetos são uma parte importante desse aprendizado. É através deles que coloco em prática o que estudo, experimento novas tecnologias e evoluo como desenvolvedor.',
+        'Meu nome é Marcus Vinicius, tenho 19 anos e sou técnico em Desenvolvimento de Sistemas pelo SENAI São Paulo. A formação me deu uma base sólida em programação, desenvolvimento web e resolução de problemas.',
+        'Atualmente estou me desenvolvendo como Full Stack Júnior, com foco em aplicações web e backend. Trabalho com React, TypeScript, JavaScript, Node.js, Python, SQL, Git/GitHub, Linux e C# em projetos práticos e em evolução constante.',
+        'Meu interesse está em construir soluções funcionais, bem organizadas e fáceis de manter, com atenção à qualidade do código e ao desempenho. Estou buscando crescer profissionalmente na área de tecnologia com foco em desenvolvimento e aprendizado contínuo.',
       ],
       panelLabel: 'Informações técnicas do desenvolvedor',
     },
@@ -102,8 +100,7 @@ export const translations: Record<Language, TranslationContent> = {
       featuredTitle: 'Projeto 4 Linhas',
       body: 'E-commerce de roupas e artigos esportivos desenvolvido com backend em Python/FastAPI, frontend server-rendered e banco de dados MySQL.',
       comingSoon: 'Em breve',
-      upcomingTitle: 'Projeto em desenvolvimento',
-      upcomingBody: 'Descrição do projeto será adicionada aqui na etapa de conteúdo do portfólio.',
+      upcomingTitle: 'Projeto em estado de desenvolvimento',
       github: 'GitHub',
       demo: 'Demo',
     },
@@ -117,7 +114,7 @@ export const translations: Record<Language, TranslationContent> = {
     certifications: {
       label: 'CERTIFICATIONS.MD',
       title: 'Certificações',
-      empty: 'As certificações serão adicionadas em breve.',
+      credly: 'Confira minhas certificações no Credly',
     },
     contact: {
       label: 'CONTACT.MD',
@@ -144,7 +141,7 @@ export const translations: Record<Language, TranslationContent> = {
     },
     hero: {
       eyebrow: 'Junior Full Stack Developer',
-      subtitle: 'Systems Development Technician — SENAI São Paulo',
+      subtitle: 'Systems Development Technician',
       description: 'Focused on building efficient, clean, and high-performance web solutions.',
       projects: 'Projects',
       contact: 'Contact',
@@ -155,10 +152,9 @@ export const translations: Record<Language, TranslationContent> = {
       label: 'ABOUT.MD',
       title: 'About Me',
       paragraphs: [
-        'I am Marcus Vinicius, a Junior Full Stack Developer and Systems Development technician from SENAI São Paulo. That training gave me a solid foundation in programming, web development, databases, and software engineering.',
-        'I enjoy turning ideas into functional applications, writing clean code, organizing my projects well, and creating interfaces that are both attractive and easy to use.',
-        'I currently work mainly with React, TypeScript, JavaScript, Python, Node.js, SQL, and Git/GitHub. I am also exploring Cloud, DevOps, observability, and application security concepts to better understand the full development cycle.',
-        'My projects are an important part of this learning process. Through them, I put theory into practice, experiment with new technologies, and evolve as a developer.',
+        'My name is Marcus Vinicius, I am 19 years old, and I studied Systems Development at SENAI São Paulo. That training gave me a solid base in programming, web development, and problem solving.',
+        'I am currently developing as a Junior Full Stack Developer, with a focus on web and backend applications. I work with React, TypeScript, JavaScript, Node.js, Python, SQL, Git/GitHub, Linux, and C# in practical projects that are constantly evolving.',
+        'My interest is in building functional, well-organized, and maintainable solutions, with attention to code quality and performance. I am looking to keep growing professionally in technology through continuous learning and hands-on development.',
       ],
       panelLabel: 'Developer technical information',
     },
@@ -169,8 +165,7 @@ export const translations: Record<Language, TranslationContent> = {
       featuredTitle: 'Projeto 4 Linhas',
       body: 'Sportswear and sporting goods e-commerce developed with a Python/FastAPI backend, server-rendered frontend, and MySQL database.',
       comingSoon: 'Coming soon',
-      upcomingTitle: 'Project in development',
-      upcomingBody: 'Project description will be added here in the portfolio content stage.',
+      upcomingTitle: 'Project in active development',
       github: 'GitHub',
       demo: 'Demo',
     },
@@ -184,7 +179,7 @@ export const translations: Record<Language, TranslationContent> = {
     certifications: {
       label: 'CERTIFICATIONS.MD',
       title: 'Certifications',
-      empty: 'Certifications will be added soon.',
+      credly: 'View my certifications on Credly',
     },
     contact: {
       label: 'CONTACT.MD',

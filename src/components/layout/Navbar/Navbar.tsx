@@ -91,6 +91,12 @@ export function Navbar() {
     };
   }, [navItems]);
 
+  const mobileLanguageLabel = language === 'pt-BR' ? 'Idioma' : 'Language';
+  const mobileThemeLabel = theme === 'light'
+    ? (language === 'pt-BR' ? 'Tema escuro' : 'Dark theme')
+    : (language === 'pt-BR' ? 'Tema claro' : 'Light theme');
+  const mobileDownloadLabel = language === 'pt-BR' ? 'Baixar currículo' : 'Download CV';
+
   const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     e.preventDefault();
     setIsMobileMenuOpen(false);
@@ -213,7 +219,7 @@ export function Navbar() {
 
           <div className="mobile-drawer-actions">
             <label className="mobile-action-row">
-              <span className="mobile-action-label">Idioma</span>
+              <span className="mobile-action-label">{mobileLanguageLabel}</span>
               <select
                 value={language}
                 onChange={(event) => setLanguage(event.target.value as 'pt-BR' | 'en')}
@@ -229,20 +235,20 @@ export function Navbar() {
             <button
               onClick={toggleTheme}
               className="mobile-theme-toggle"
-              aria-label={theme === 'light' ? 'Mudar para tema escuro' : 'Mudar para tema claro'}
+              aria-label={theme === 'light' ? (language === 'pt-BR' ? 'Mudar para tema escuro' : 'Switch to dark theme') : (language === 'pt-BR' ? 'Mudar para tema claro' : 'Switch to light theme')}
               type="button"
             >
-              <span className="mobile-action-label">{theme === 'light' ? 'Tema escuro' : 'Tema claro'}</span>
+              <span className="mobile-action-label">{mobileThemeLabel}</span>
             </button>
 
             <a
               href="/files/CV_Marcus_Vinicius.pdf"
               className="mobile-download-link"
-              aria-label="Baixar currículo"
+              aria-label={mobileDownloadLabel}
               download
               onClick={() => setIsMobileMenuOpen(false)}
             >
-              <span className="mobile-action-label">Currículo</span>
+              <span className="mobile-action-label">{mobileDownloadLabel}</span>
             </a>
           </div>
         </div>

@@ -45,10 +45,15 @@
   padding: 20px 22px;
 }
 
-.certifications-empty p {
-  margin: 0;
-  color: var(--text-secondary);
+.certifications-link {
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 500;
   line-height: 1.6;
+}
+
+.certifications-link:hover {
+  text-decoration: underline;
 }
 
 @media (max-width: 768px) {
