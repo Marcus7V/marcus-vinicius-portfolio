@@ -1,75 +1,74 @@
 # Marcus Vinicius
 
-Portfólio pessoal de Marcus Vinicius, desenvolvedor Full Stack Júnior com formação em Técnico em Desenvolvimento de Sistemas.
+Portfólio pessoal de Marcus Vinicius, Desenvolvedor Full Stack Júnior e Técnico em Desenvolvimento de Sistemas.
 
 ## Sobre o projeto
 
-Este projeto é meu portfólio pessoal para apresentar minhas habilidades, projetos, formação, certificações e formas de contato. O site foi construído com React, TypeScript e Vite, com foco em uma apresentação profissional, responsiva e com suporte a temas e idiomas.
+Este é meu portfólio pessoal, desenvolvido para apresentar minha trajetória, projetos, habilidades, formação, certificações e formas de contato.
 
-## Stack principal
+O projeto foi desenvolvido com React, TypeScript e Vite, com foco em uma interface moderna, responsiva e profissional, suporte a temas claro/escuro e internacionalização PT-BR/EN.
+
+## Stack
 
 - React
 - TypeScript
-- JavaScript
 - Vite
 - CSS
-- Node.js
-- Python
-- SQL
+- JavaScript
+- HTML
 - Git/GitHub
 
-## Estrutura geral
+## Estrutura
 
-- `src/App.tsx` — montagem das seções do portfólio
-- `src/components/` — componentes reutilizáveis e seções
-- `src/i18n/` — sistema de idioma PT-BR / EN
-- `src/hooks/` — hooks de tema e outros comportamentos
-- `public/` — arquivos públicos estáticos, incluindo o currículo
-- `src/index.css` — estilos globais e reset do layout
+- `src/App.tsx` — estrutura principal da aplicação
+- `src/components/` — componentes e seções do portfólio
+- `src/i18n/` — sistema de internacionalização PT-BR / EN
+- `src/hooks/` — hooks utilizados pela aplicação
+- `src/index.css` — estilos globais e design tokens
+- `public/` — arquivos públicos, incluindo o currículo em PDF
 
-## Funcionalidades principais
+## Seções
 
-- layout responsivo
-- suporte a tema claro/escuro
-- sistema de idiomas PT-BR / EN
-- seção de projetos
-- seção de habilidades
-- formação
-- certificações com link para o Credly
-- contato
-- download público do currículo em PDF
+- Hero
+- Sobre mim
+- Projetos
+- Habilidades
+- Formação
+- Certificações
+- Contato
+- Footer
+
+## Funcionalidades
+
+- Layout responsivo
+- Tema claro e escuro
+- Internacionalização PT-BR / EN
+- Menu mobile
+- Navegação entre seções
+- Animações e interações nos elementos da interface
+- Download do currículo em PDF
+- Links para LinkedIn, GitHub, Email e Credly
+- Seção de formação
+- Seção de certificações
+- Informações de contato
+
+## Formação
+
+**Técnico em Desenvolvimento de Sistemas**  
+SENAI São Paulo
+
+## Área de atuação
+
+- Desenvolvimento Full Stack Júnior
+- Desenvolvimento Web
+- Frontend
+- Backend
+- APIs
+- Banco de dados
+- Desenvolvimento de aplicações
 
 ## Executar localmente
 
 ```bash
 npm install
 npm run dev
-```
-
-## Scripts disponíveis
-
-```bash
-npm run dev
-npm run build
-npm run lint
-npm run preview
-```
-
-## Observações
-
-- O site é um portfolio pessoal e não representa uma aplicação de e-commerce, SaaS ou sistema de gestão.
-- O currículo público está disponível em `public/files/CV_Marcus_Vinicius.pdf`.
-- O projeto inclui suporte a tema e idioma, mantendo a identidade visual e responsividade.
-
-## Informações de formação
-
-- Técnico em Desenvolvimento de Sistemas
-- SENAI São Paulo
-
-## Área de atuação
-
-- Desenvolvimento Full Stack Júnior
-- Desenvolvimento Web
-- Backend
-- Frontend
-- projetos práticos e estudo contínuo

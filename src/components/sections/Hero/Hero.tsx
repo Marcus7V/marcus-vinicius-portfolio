@@ -5,6 +5,13 @@ import './Hero.css';
 export function Hero() {
   const { t } = useLanguage();
 
+  const professionalLinks = [
+    { label: t.hero.linkedin, href: 'https://www.linkedin.com/in/marcus-vinicius-0b8668351/' },
+    { label: t.hero.github, href: 'https://github.com/Marcus7V' },
+    { label: t.hero.email, href: 'mailto:marcusvini751663@gmail.com' },
+    { label: t.hero.credly, href: 'https://www.credly.com/users/marcus-vinicius.e37dde10' },
+  ];
+
   return (
     <section id="hero" className="hero-section scroll-section" aria-labelledby="hero-title">
       <div className="hero-content">
@@ -13,7 +20,15 @@ export function Hero() {
           <h1 id="hero-title">Marcus Vinicius</h1>
           <p className="hero-subtitle">{t.hero.subtitle}</p>
           <p className="hero-description">{t.hero.description}</p>
-          <p className="hero-availability">{t.hero.availability}</p>
+
+          <div
+            className="hero-availability-block"
+            aria-label={`${t.hero.availabilityModes} · ${t.hero.location}`}
+          >
+            <p className="hero-availability">
+              {`${t.hero.availabilityModes} · ${t.hero.location}`}
+            </p>
+          </div>
 
           <div className="hero-actions">
             <a className="hero-cta primary" href="#projects">
@@ -27,11 +42,18 @@ export function Hero() {
             </a>
           </div>
 
-          <div className="hero-highlights" aria-label={t.hero.techLabel}>
-            <span>React</span>
-            <span>TypeScript</span>
-            <span>Node.js</span>
-            <span>Git/GitHub</span>
+          <div className="hero-links" aria-label={t.hero.techLabel}>
+            {professionalLinks.map(({ label, href }) => (
+              <a
+                key={label}
+                href={href}
+                target={href.startsWith('http') ? '_blank' : undefined}
+                rel={href.startsWith('http') ? 'noopener noreferrer' : undefined}
+                className="hero-link"
+              >
+                {label}
+              </a>
+            ))}
           </div>
         </div>
 

@@ -16,6 +16,12 @@ export type TranslationContent = {
     subtitle: string;
     description: string;
     availability: string;
+    availabilityModes: string;
+    location: string;
+    linkedin: string;
+    github: string;
+    email: string;
+    credly: string;
     projects: string;
     contact: string;
     downloadCv: string;
@@ -79,11 +85,17 @@ export const translations: Record<Language, TranslationContent> = {
       eyebrow: 'Desenvolvedor Full Stack Júnior',
       subtitle: 'Técnico em Desenvolvimento de Sistemas',
       description: 'Focado em construir soluções web eficientes, limpas e de alto desempenho.',
-      availability: 'Disponível para projetos, oportunidades profissionais e novos desafios.',
+      availability: 'Disponível para projetos e oportunidades',
+      availabilityModes: 'Freelance · Presencial · Híbrido · Remoto',
+      location: 'Suzano, SP',
+      linkedin: 'LinkedIn',
+      github: 'GitHub',
+      email: 'Email',
+      credly: 'Credly',
       projects: 'Projetos',
       contact: 'Contato',
       downloadCv: 'Baixar currículo',
-      techLabel: 'Tecnologias principais',
+      techLabel: 'Links profissionais',
     },
     about: {
       label: 'ABOUT.MD',
@@ -146,11 +158,17 @@ export const translations: Record<Language, TranslationContent> = {
       eyebrow: 'Junior Full Stack Developer',
       subtitle: 'Systems Development Technician',
       description: 'Focused on building efficient, clean, and high-performance web solutions.',
-      availability: 'Available for projects, professional opportunities and new challenges.',
+      availability: 'Available for projects and opportunities',
+      availabilityModes: 'Freelance · On-site · Hybrid · Remote',
+      location: 'Suzano, SP',
+      linkedin: 'LinkedIn',
+      github: 'GitHub',
+      email: 'Email',
+      credly: 'Credly',
       projects: 'Projects',
       contact: 'Contact',
       downloadCv: 'Download CV',
-      techLabel: 'Main technologies',
+      techLabel: 'Professional links',
     },
     about: {
       label: 'ABOUT.MD',
