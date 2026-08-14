@@ -13,6 +13,7 @@ export function Hero() {
           <h1 id="hero-title">Marcus Vinicius</h1>
           <p className="hero-subtitle">{t.hero.subtitle}</p>
           <p className="hero-description">{t.hero.description}</p>
+          <p className="hero-availability">{t.hero.availability}</p>
 
           <div className="hero-actions">
             <a className="hero-cta primary" href="#projects">

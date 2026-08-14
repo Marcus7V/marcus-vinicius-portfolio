@@ -15,6 +15,7 @@ export type TranslationContent = {
     eyebrow: string;
     subtitle: string;
     description: string;
+    availability: string;
     projects: string;
     contact: string;
     downloadCv: string;
@@ -78,6 +79,7 @@ export const translations: Record<Language, TranslationContent> = {
       eyebrow: 'Desenvolvedor Full Stack Júnior',
       subtitle: 'Técnico em Desenvolvimento de Sistemas',
       description: 'Focado em construir soluções web eficientes, limpas e de alto desempenho.',
+      availability: 'Disponível para projetos, oportunidades profissionais e novos desafios.',
       projects: 'Projetos',
       contact: 'Contato',
       downloadCv: 'Baixar currículo',
@@ -90,6 +92,7 @@ export const translations: Record<Language, TranslationContent> = {
         'Meu nome é Marcus Vinicius, tenho 19 anos e sou técnico em Desenvolvimento de Sistemas pelo SENAI São Paulo. A formação me deu uma base sólida em programação, desenvolvimento web e resolução de problemas.',
         'Atualmente estou me desenvolvendo como Full Stack Júnior, com foco em aplicações web e backend. Trabalho com React, TypeScript, JavaScript, Node.js, Python, SQL, Git/GitHub, Linux e C# em projetos práticos e em evolução constante.',
         'Meu interesse está em construir soluções funcionais, bem organizadas e fáceis de manter, com atenção à qualidade do código e ao desempenho. Estou buscando crescer profissionalmente na área de tecnologia com foco em desenvolvimento e aprendizado contínuo.',
+        'Atualmente, estou disponível para novos projetos, oportunidades profissionais e desafios na área de desenvolvimento de software, com interesse em atuar principalmente como Desenvolvedor Full Stack Júnior.',
       ],
       panelLabel: 'Informações técnicas do desenvolvedor',
     },
@@ -143,6 +146,7 @@ export const translations: Record<Language, TranslationContent> = {
       eyebrow: 'Junior Full Stack Developer',
       subtitle: 'Systems Development Technician',
       description: 'Focused on building efficient, clean, and high-performance web solutions.',
+      availability: 'Available for projects, professional opportunities and new challenges.',
       projects: 'Projects',
       contact: 'Contact',
       downloadCv: 'Download CV',
@@ -155,6 +159,7 @@ export const translations: Record<Language, TranslationContent> = {
         'My name is Marcus Vinicius, I am 19 years old, and I studied Systems Development at SENAI São Paulo. That training gave me a solid base in programming, web development, and problem solving.',
         'I am currently developing as a Junior Full Stack Developer, with a focus on web and backend applications. I work with React, TypeScript, JavaScript, Node.js, Python, SQL, Git/GitHub, Linux, and C# in practical projects that are constantly evolving.',
         'My interest is in building functional, well-organized, and maintainable solutions, with attention to code quality and performance. I am looking to keep growing professionally in technology through continuous learning and hands-on development.',
+        'Currently, I am available for new projects, professional opportunities, and challenges in the software development field, with interest in working primarily as a Junior Full Stack Developer.',
       ],
       panelLabel: 'Developer technical information',
     },
