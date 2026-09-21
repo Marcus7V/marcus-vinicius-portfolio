@@ -39,8 +39,9 @@ export type TranslationContent = {
     caseStudy: string;
     featuredTitle: string;
     body: string;
-    comingSoon: string;
-    upcomingTitle: string;
+    developmentStatus: string;
+    erpTitle: string;
+    erpBody: string;
     github: string;
     demo: string;
   };
@@ -114,8 +115,9 @@ export const translations: Record<Language, TranslationContent> = {
       caseStudy: 'Case Study',
       featuredTitle: 'Projeto 4 Linhas',
       body: 'E-commerce de roupas e artigos esportivos desenvolvido com backend em Python/FastAPI, frontend server-rendered e banco de dados MySQL.',
-      comingSoon: 'Em breve',
-      upcomingTitle: 'Projeto em estado de desenvolvimento',
+      developmentStatus: 'Em desenvolvimento',
+      erpTitle: '404 ERP',
+      erpBody: 'Sistema ERP web modular desenvolvido para pequenas e médias empresas.',
       github: 'GitHub',
       demo: 'Demo',
     },
@@ -187,8 +189,9 @@ export const translations: Record<Language, TranslationContent> = {
       caseStudy: 'Case Study',
       featuredTitle: 'Projeto 4 Linhas',
       body: 'Sportswear and sporting goods e-commerce developed with a Python/FastAPI backend, server-rendered frontend, and MySQL database.',
-      comingSoon: 'Coming soon',
-      upcomingTitle: 'Project in active development',
+      developmentStatus: 'In development',
+      erpTitle: '404 ERP',
+      erpBody: 'Modular web ERP system developed for small and medium-sized businesses.',
       github: 'GitHub',
       demo: 'Demo',
     },

@@ -10,7 +10,7 @@ const skillCategories = [
   {
     key: 'backend',
     title: 'Backend',
-    technologies: ['Python', 'FastAPI', 'Node.js', 'C#', 'APIs REST'],
+    technologies: ['Python', 'FastAPI', 'Node.js', 'C#', 'PHP', 'APIs REST'],
   },
   {
     key: 'database',

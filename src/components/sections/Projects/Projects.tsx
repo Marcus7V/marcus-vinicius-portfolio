@@ -70,11 +70,46 @@ export function Projects() {
           </div>
         </article>
 
-        <article className="project-story" aria-label={t.projects.upcomingTitle}>
+        <article className="project-story" aria-label={t.projects.erpTitle}>
           <div className="project-story-header">
             <div className="project-heading-group">
-              <span className="project-kicker">{t.projects.comingSoon}</span>
-              <h3>{t.projects.upcomingTitle}</h3>
+              <span className="project-kicker">{t.projects.developmentStatus}</span>
+              <h3>{t.projects.erpTitle}</h3>
+            </div>
+          </div>
+
+          <div className="project-story-content">
+            <div className="project-preview project-preview-placeholder">
+              <span>{t.projects.erpTitle}</span>
+            </div>
+
+            <div className="project-body">
+              <p>{t.projects.erpBody}</p>
+
+              <div className="project-tags" aria-label="Tecnologias do projeto">
+                <span>Java</span>
+                <span>Spring Boot</span>
+                <span>Vue 3</span>
+                <span>TypeScript</span>
+                <span>PostgreSQL</span>
+                <span>Spring Security</span>
+                <span>JWT</span>
+                <span>JPA / Hibernate</span>
+                <span>Maven</span>
+                <span>Docker</span>
+                <span>REST API</span>
+              </div>
+
+              <div className="project-actions">
+                <a
+                  href="https://github.com/404-Code-Busters/404-ERP"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="project-link primary"
+                >
+                  {t.projects.github}
+                </a>
+              </div>
             </div>
           </div>
         </article>
