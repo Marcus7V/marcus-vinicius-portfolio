@@ -20,7 +20,7 @@ const skillCategories = [
   {
     key: 'tools',
     title: 'Tools / DevOps',
-    technologies: ['Git', 'GitHub', 'Linux', 'npm'],
+    technologies: ['Git', 'GitHub', 'Docker', 'Google Cloud Platform (GCP)', 'Linux', 'npm'],
   },
 ];
 

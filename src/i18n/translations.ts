@@ -103,7 +103,8 @@ export const translations: Record<Language, TranslationContent> = {
       title: 'Sobre Mim',
       paragraphs: [
         'Meu nome é Marcus Vinicius, tenho 19 anos e sou técnico em Desenvolvimento de Sistemas pelo SENAI São Paulo. A formação me deu uma base sólida em programação, desenvolvimento web e resolução de problemas.',
-        'Atualmente estou me desenvolvendo como Full Stack Júnior, com foco em aplicações web e backend. Trabalho com React, TypeScript, JavaScript, Node.js, Python, SQL, Git/GitHub, Linux e C# em projetos práticos e em evolução constante.',
+        'Atualmente atuo como Desenvolvedor de Software na Lumiar Tecnologia, empresa de desenvolvimento de software. Atuo com PHP, Next.js, React, APIs REST, MySQL, Docker, Git/GitHub e Google Cloud Platform (GCP).',
+        'Atuo no desenvolvimento e na manutenção de aplicações web, com foco em integração de APIs REST e utilização de serviços em nuvem da Google Cloud Platform.',
         'Meu interesse está em construir soluções funcionais, bem organizadas e fáceis de manter, com atenção à qualidade do código e ao desempenho. Estou buscando crescer profissionalmente na área de tecnologia com foco em desenvolvimento e aprendizado contínuo.',
         'Atualmente, estou disponível para novos projetos, oportunidades profissionais e desafios na área de desenvolvimento de software, com interesse em atuar principalmente como Desenvolvedor Full Stack Júnior.',
       ],
@@ -177,7 +178,8 @@ export const translations: Record<Language, TranslationContent> = {
       title: 'About Me',
       paragraphs: [
         'My name is Marcus Vinicius, I am 19 years old, and I studied Systems Development at SENAI São Paulo. That training gave me a solid base in programming, web development, and problem solving.',
-        'I am currently developing as a Junior Full Stack Developer, with a focus on web and backend applications. I work with React, TypeScript, JavaScript, Node.js, Python, SQL, Git/GitHub, Linux, and C# in practical projects that are constantly evolving.',
+        'I currently work as a Software Developer at Lumiar Tecnologia, a software development company. I work with PHP, Next.js, React, REST APIs, MySQL, Docker, Git/GitHub, and Google Cloud Platform (GCP).',
+        'I develop and maintain web applications, with a focus on REST API integration and the use of Google Cloud Platform cloud services.',
         'My interest is in building functional, well-organized, and maintainable solutions, with attention to code quality and performance. I am looking to keep growing professionally in technology through continuous learning and hands-on development.',
         'Currently, I am available for new projects, professional opportunities, and challenges in the software development field, with interest in working primarily as a Junior Full Stack Developer.',
       ],

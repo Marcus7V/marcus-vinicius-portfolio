@@ -33,7 +33,8 @@ export function About() {
               <pre className="about-code">
                 <code>{`{
   "name": "Marcus Vinicius",
-  "role": "Full Stack Jr.",
+  "role": "Desenvolvedor de Software",
+  "company": "Lumiar Tecnologia",
   "education": "SENAI",
   "focus": [
     "Web Development",
